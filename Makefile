@@ -3,8 +3,8 @@ all:
 	@make -C lib  all
 	@make -C tests all
 
-tests: all
-	@make -C tests test
+run: all
+	@make -C tests run
 
 clean:
 	@make -C lib clean

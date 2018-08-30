@@ -4,7 +4,7 @@ EXE = example
 
 all: $(EXE)
 
-test: all $(addsuffix -test,$(EXE))
+run: all $(addsuffix -run,$(EXE))
 
 clean:
 	rm -f $(EXE) *~ logfile.txt $(ECE)
@@ -12,6 +12,6 @@ clean:
 %: %.cpp
 	$(CXX) -o $@ $< -Wall -Werror -I ../include -L ../lib -lece309
 
-%-test:
+%-run:
 	@./$*
 
